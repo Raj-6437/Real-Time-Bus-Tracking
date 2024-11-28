@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule: Satara Bus Stand to Satara MIDC</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+
+        .schedule-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .schedule-container h2 {
+            text-align: center;
+            color: #023047;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #00b4d8;
+            color: white;
+            font-size: 18px;
+        }
+
+        table td {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #00b4d8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0096c7;
+        }
+
+        /* Loader Styles */
+        #loader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loader div {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #005f73;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table th, table td {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Bus Schedule: khednaka  to shahupuri
+</header>
+
+<!-- Loader -->
+<div id="loader">
+    <div></div>
+</div>
+
+<!-- Schedule Container -->
+<div class="schedule-container" id="schedule">
+    <h2>Timetable - Daily Service</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Bus Type</th>
+                <th>Distance (km)</th>
+                <th>Ticket Price (₹)</th>
+                <th>Time Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>05:00 AM</td>
+                <td>05:20 AM</td>
+                <td>Non-AC</td>
+                <td>12</td>
+                <td>₹15</td>
+                <td>20 mins</td>
+            </tr>
+            <tr>
+                <td>06:30 AM</td>
+                <td>07:00 AM</td>
+                <td>AC</td>
+                <td>12</td>
+                <td>₹45</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>08:40 AM</td>
+                <td>09:00 AM</td>
+                <td>Non-AC</td>
+                <td>12</td>
+                <td>₹20</td>
+                <td>20 mins</td>
+            </tr>
+            <tr>
+                <td>10:50 AM</td>
+                <td>11:00 AM</td>
+                <td>Luxury-AC</td>
+                <td>12</td>
+                <td>₹45</td>
+                <td>10 mins</td>
+            </tr>
+            <tr>
+                <td>11:10 AM</td>
+                <td>11:25 AM</td>
+                <td>Non-AC</td>
+                <td>12</td>
+                <td>₹20</td>
+                <td>15 mins</td>
+            </tr>
+            <tr>
+                <td>12:00 PM</td>
+                <td>12:30 PM</td>
+                <td>AC</td>
+                <td>12</td>
+                <td>₹30</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>02:40 PM</td>
+                <td>02:50 PM</td>
+                <td>Non-AC</td>
+                <td>12</td>
+                <td>₹15</td>
+                <td>10 mins</td>
+            </tr>
+            <tr>
+                <td>04:00 PM</td>
+                <td>04:40 PM</td>
+                <td>AC</td>
+                <td>12</td>
+                <td>₹35</td>
+                <td>40 mins</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn-container">
+        <a href="dashboard.html" class="btn">Back to Dashboard</a>
+    </div>
+</div>
+
+<script>
+    // Delay for 3 seconds before showing the content
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('schedule').style.opacity = '1';
+        }, 3000);
+    };
+</script>
+
+</body>
+</html>

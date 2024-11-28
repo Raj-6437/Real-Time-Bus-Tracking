@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bus Registration Form</h2>
+        <form action="/submit_registration" method="post">
+            <div class="form-group">
+                <label for="busName">Bus Name:</label>
+                <input type="text" id="busName" name="busName" required>
+            </div>
+            <div class="form-group">
+                <label for="busType">Bus Type:</label>
+                <input type="text" id="busType" name="busType" required>
+            </div>
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required>
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required>
+            </div>
+            <div class="form-group">
+                <label for="busStopName">Bus Stop Name:</label>
+                <input type="text" id="busStopName" name="busStopName" required>
+            </div>
+            <div class="form-group">
+                <label for="busNumber">Bus Number:</label>
+                <input type="text" id="busNumber" name="busNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="ticketPrice">Ticket Price :</label>
+                <input type="number" id="ticketPrice" name="ticketPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="departureTime">Departure Time:</label>
+                <input type="time" id="departureTime" name="departureTime" required>
+            </div>
+            <div class="form-group">
+                <label for="arrivalTime">Arrival Time:</label>
+                <input type="time" id="arrivalTime" name="arrivalTime" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register Bus</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

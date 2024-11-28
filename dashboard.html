@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            position: relative;
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background-color: #ffffff;
+            color: #005f73;
+            border: 2px solid #005f73;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #005f73;
+            color: white;
+        }
+
+        .container {
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 20px;
+            width: calc(45% - 40px);
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #023047;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .section p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Icon styles */
+        .section .icon {
+            font-size: 50px;
+            color: #00b4d8;
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Button styles */
+        button {
+            background-color: #00b4d8;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            max-width: 150px;
+            margin: 0 auto;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0096c7;
+        }
+
+        /* Link inside button */
+        button a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Responsive layout for mobile */
+        @media screen and (max-width: 768px) {
+            .section {
+                width: 100%;
+            }
+        }
+
+        /* Additional styling */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://example.com/background-pattern.png');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="login.html" class="back-button">Back</a>
+        Dashboard
+    </header>
+
+    <div class="container">
+        <!-- Bus Schedule Section -->
+        <div class="section" id="bus-schedule">
+            <span class="icon">🚌</span>
+            <h2>Bus Schedule</h2>
+            <p>
+                View the bus schedule for all routes in Satara City. You can check timings, bus numbers, and frequency to help plan your travel.
+            </p>
+            <button><a href="locations.html">View Schedule</a></button>
+        </div>
+
+        <!-- Find My Bus Section -->
+        <div class="section" id="find-my-bus">
+            <span class="icon">📍</span>
+            <h2>Find My Bus</h2>
+            <p>
+                Use the GPS tracking system to find the current location of your bus in real-time. Ensure that you never miss your bus again.
+            </p>
+           
+		 <button><a href="map.html">Track Bus</a></button>
+        </div>
+
+        <!-- Emergency Section -->
+        <div class="section" id="emergency">
+            <span class="icon">⚠️</span>
+            <h2>Emergency</h2>
+            <p>
+                In case of an emergency, access quick contact information for local police, hospitals, and bus authority helplines.
+            </p>
+            <button><a href="emergency.html">Get Help</a></button>
+        </div>
+
+        <!-- About Section -->
+        <div class="section" id="about">
+            <span class="icon">ℹ️</span>
+            <h2>About</h2>
+            <p>
+                Learn more about the public transportation system in Satara City. Explore the services we offer to make your travel convenient and safe.
+            </p>
+            <button><a href="about.html">Learn More</a></button>
+        </div>
+    </div>
+ <footer>
+        &copy; 2024 Bus Tracking & Schedule. All rights reserved.
+    </footer>
+</body>
+</html>

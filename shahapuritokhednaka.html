@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule: Shahapuri To Khednaka</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #005f73;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+
+        .schedule-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Start hidden */
+            transition: opacity 1s ease-in; /* Animation for fade-in */
+        }
+
+        .schedule-container.show {
+            opacity: 1; /* Show the container */
+        }
+
+        .schedule-container h2 {
+            text-align: center;
+            color: #023047;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #00b4d8;
+            color: white;
+            font-size: 18px;
+        }
+
+        table td {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #00b4d8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0096c7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table th, table td {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Bus Schedule: Shahapuri To Khednaka
+</header>
+
+<div class="schedule-container" id="schedule">
+    <h2>Timetable - Daily Service</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Bus Type</th>
+                <th>Distance (km)</th>
+                <th>Ticket Price (₹)</th>
+                <th>Time Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>07:30 AM</td>
+                <td>08:00 AM</td>
+                <td>Non-AC</td>
+                <td>10</td>
+                <td>₹20</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>09:00 AM</td>
+                <td>09:30 AM</td>
+                <td>AC</td>
+                <td>10</td>
+                <td>₹30</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>10:00 AM</td>
+                <td>10:30 AM</td>
+                <td>Non-AC</td>
+                <td>10</td>
+                <td>₹20</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>11:00 AM</td>
+                <td>11:30 AM</td>
+                <td>AC</td>
+                <td>10</td>
+                <td>₹30</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>12:30 PM</td>
+                <td>01:00 PM</td>
+                <td>Non-AC</td>
+                <td>10</td>
+                <td>₹20</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>02:30 PM</td>
+                <td>03:00 PM</td>
+                <td>AC</td>
+                <td>10</td>
+                <td>₹30</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>04:00 PM</td>
+                <td>04:30 PM</td>
+                <td>Non-AC</td>
+                <td>10</td>
+                <td>₹20</td>
+                <td>30 mins</td>
+            </tr>
+            <tr>
+                <td>05:30 PM</td>
+                <td>06:00 PM</td>
+                <td>AC</td>
+                <td>10</td>
+                <td>₹30</td>
+                <td>30 mins</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn-container">
+        <a href="dashboard.html" class="btn">Back to Dashboard</a>
+    </div>
+</div>
+
+<script>
+    // Delay showing the schedule by 3 seconds
+    setTimeout(() => {
+        document.getElementById('schedule').classList.add('show');
+    }, 3000);
+
+        <a href="locations.html"</a>
+
+</script>
+
+</body>
+</html>

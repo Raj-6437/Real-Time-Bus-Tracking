@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Route Selection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #023047;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus {
+            border-color: #00b4d8;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #00b4d8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0077b6;
+        }
+    </style>
+
+    <script>
+        function checkRoute() {
+            const departure = document.getElementById("departure").value;
+            const destination = document.getElementById("destination").value;
+
+            // Route: Satara Bus Stand to various destinations
+            if (departure === "Satara Bus Stand" && destination === "MIDC Satara") {
+                window.location.href = "sataratomidc.html";
+                return false;
+            } else if (departure === "Satara Bus Stand" && destination === "Khed Naka") {
+                window.location.href = "sataratokhednaka.html";
+                return false;
+            } else if (departure === "Satara Bus Stand" && destination === "Sadar Bazar") {
+                window.location.href = "sataratosadarbazar.html";
+                return false;
+            } else if (departure === "Satara Bus Stand" && destination === "Godoli") {
+                window.location.href = "sataratogodoli.html";
+                return false;
+            } else if (departure === "Satara Bus Stand" && destination === "Shahupuri") {
+                window.location.href = "sataratoshahupuri.html";
+                return false;
+            }
+
+            // Route: MIDC Satara to various destinations
+            else if (departure === "MIDC Satara" && destination === "Satara Bus Stand") {
+                window.location.href = "midctosatara.html";
+                return false;
+            } else if (departure === "MIDC Satara" && destination === "Khed Naka") {
+                window.location.href = "midctokhednaka.html";
+                return false;
+            } else if (departure === "MIDC Satara" && destination === "Sadar Bazar") {
+                window.location.href = "midctosadarbazar.html";
+                return false;
+            } else if (departure === "MIDC Satara" && destination === "Godoli") {
+                window.location.href = "midctogodoli.html";
+                return false;
+            } else if (departure === "MIDC Satara" && destination === "Shahupuri") {
+                window.location.href = "midctoshahupuri.html";
+                return false;
+            }
+
+            // Route: Khed Naka to various destinations
+            else if (departure === "Khed Naka" && destination === "Satara Bus Stand") {
+                window.location.href = "khednakatosatara.html";
+                return false;
+            } else if (departure === "Khed Naka" && destination === "MIDC Satara") {
+                window.location.href = "khednakatomidc.html";
+                return false;
+            } else if (departure === "Khed Naka" && destination === "Sadar Bazar") {
+                window.location.href = "khednakatosadarbazar.html";
+                return false;
+            } else if (departure === "Khed Naka" && destination === "Godoli") {
+                window.location.href = "khednakatogodoli.html";
+                return false;
+            } else if (departure === "Khed Naka" && destination === "Shahupuri") {
+                window.location.href = "khednakatoshahupuri.html";
+                return false;
+            }
+
+            // Route: Sadar Bazar to various destinations
+            else if (departure === "Sadar Bazar" && destination === "Satara Bus Stand") {
+                window.location.href = "sadarbazartotosatara.html";
+                return false;
+            } else if (departure === "Sadar Bazar" && destination === "MIDC Satara") {
+                window.location.href = "sadarbazartomidc.html";
+                return false;
+            } else if (departure === "Sadar Bazar" && destination === "Khed Naka") {
+                window.location.href = "sadarbazartokhednaka.html";
+                return false;
+            } else if (departure === "Sadar Bazar" && destination === "Godoli") {
+                window.location.href = "sadarbazartogodoli.html";
+                return false;
+            } else if (departure === "Sadar Bazar" && destination === "Shahupuri") {
+                window.location.href = "sadarbazartoshahupuri.html";
+                return false;
+            }
+
+            // Route: Godoli to various destinations
+            else if (departure === "Godoli" && destination === "Satara Bus Stand") {
+                window.location.href = "godolitotosatara.html";
+                return false;
+            } else if (departure === "Godoli" && destination === "MIDC Satara") {
+                window.location.href = "godolitomidc.html";
+                return false;
+            } else if (departure === "Godoli" && destination === "Khed Naka") {
+                window.location.href = "godolitokhednaka.html";
+                return false;
+            } else if (departure === "Godoli" && destination === "Sadar Bazar") {
+                window.location.href = "godolitosadarbazar.html";
+                return false;
+            } else if (departure === "Godoli" && destination === "Shahupuri") {
+                window.location.href = "godolitoshahupuri.html";
+                return false;
+            }
+
+            // Route: Shahupuri to various destinations
+            else if (departure === "Shahupuri" && destination === "Satara Bus Stand") {
+                window.location.href = "shahupuritosatara.html";
+                return false;
+            } else if (departure === "Shahupuri" && destination === "MIDC Satara") {
+                window.location.href = "shahupuritomidc.html";
+                return false;
+            } else if (departure === "Shahupuri" && destination === "Khed Naka") {
+                window.location.href = "shahupuritokhednaka.html";
+                return false;
+            } else if (departure === "Shahupuri" && destination === "Sadar Bazar") {
+                window.location.href = "shahupuritosadarbazar.html";
+                return false;
+            } else if (departure === "Shahupuri" && destination === "Godoli") {
+                window.location.href = "shahupuritogodoli.html";
+                return false;
+            }
+
+            // If no valid route, alert the user
+            else {
+                alert("Route not available. Please select a valid combination.");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+         Bus Timetable
+    </header>
+
+    <div class="container">
+        <h2>Plan Your Journey</h2>
+
+        <form action="#" method="post" onsubmit="return checkRoute()">
+            <!-- Departure Selection -->
+            <label for="departure">Select Departure Location:</label>
+            <select id="departure" name="departure" required>
+                <option value="">-- Select Departure Location --</option>
+                <option value="Satara Bus Stand">Satara Bus Stand</option>
+                <option value="Khed Naka">Khed Naka</option>
+                <option value="Sadar Bazar">Sadar Bazar</option>
+                <option value="Godoli">Godoli</option>
+                <option value="Shahupuri">Shahupuri</option>
+                <option value="MIDC Satara">MIDC Satara</option>
+            </select>
+
+            <!-- Destination Selection -->
+            <label for="destination">Select Destination Location:</label>
+            <select id="destination" name="destination" required>
+                <option value="">-- Select Destination Location --</option>
+                <option value="Satara Bus Stand">Satara Bus Stand</option>
+                <option value="Khed Naka">Khed Naka</option>
+                <option value="Sadar Bazar">Sadar Bazar</option>
+                <option value="Godoli">Godoli</option>
+                <option value="Shahupuri">Shahupuri</option>
+                <option value="MIDC Satara">MIDC Satara</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit">Find Bus Timetable</button>
+        </form>
+    </div>
+
+</body>
+</html>

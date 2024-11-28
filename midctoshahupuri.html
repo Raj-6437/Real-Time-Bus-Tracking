@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Schedule: Sadar Bazar to Godoli</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .schedule-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease; /* Fade effect */
+        }
+
+        .schedule-container.visible {
+            opacity: 1; /* Show the content */
+        }
+
+        .schedule-container h2 {
+            text-align: center;
+            color: #023047;
+            font-size: 22px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        table th {
+            background-color: #00b4d8;
+            color: white;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        table td {
+            font-size: 16px;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        table tr:nth-child(even) td {
+            background-color: #f1f5f9;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #0077b6;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005f9e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table th, table td {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .schedule-container {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Bus Schedule:  MIDC to Shahupuri
+</header>
+
+<div class="schedule-container" id="scheduleContainer">
+    <h2>Timetable - Daily Service</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Departure Time</th>
+                <th>Arrival Time</th>
+                <th>Bus Type</th>
+                <th>Distance (km)</th>
+                <th>Ticket Price (₹)</th>
+                <th>Time Taken</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>06:20 AM</td>
+                <td>06:35 AM</td>
+                <td>Non-AC</td>
+                <td>7.5</td>
+                <td>₹10</td>
+                <td>15 mins</td>
+            </tr>
+            <tr>
+                <td>08:55 AM</td>
+                <td>09:05 AM</td>
+                <td>AC</td>
+                <td>7.5</td>
+                <td>₹40</td>
+                <td>10 mins</td>
+            </tr>
+            <tr>
+                <td>09:00 AM</td>
+                <td>09:20 AM</td>
+                <td>Semi-AC</td>
+                <td>7.5</td>
+                <td>₹20</td>
+                <td>20 mins</td>
+            </tr>
+            <tr>
+                <td>10:20 AM</td>
+                <td>10:35 AM</td>
+                <td>Non-AC</td>
+                <td>7.5</td>
+                <td>₹15</td>
+                <td>15 mins</td>
+            </tr>
+            <tr>
+                <td>12:47 PM</td>
+                <td>01:00 PM</td>
+                <td>AC</td>
+                <td>7.5</td>
+                <td>₹10</td>
+                <td>13 mins</td>
+            </tr>
+            <tr>
+                <td>02:00 PM</td>
+                <td>02:25 PM</td>
+                <td>Semi-AC</td>
+                <td>7.5</td>
+                <td>₹20</td>
+                <td>25 mins</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="btn-container">
+        <a href="dashboard.html" class="btn">Back to Dashboard</a>
+    </div>
+</div>
+
+<script>
+    // Delay and fade-in effect
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('scheduleContainer').classList.add('visible');
+        }, 3000); // 3 seconds delay
+    };
+</script>
+
+</body>
+</html>
